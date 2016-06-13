@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<div id="time"></div>
+<div><img id="image" style="width:800px"></img></div>
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    var reload = function() {
+	$( '#time' ).text( new Date() );	
+	$( '#image' ).attr( "src", "file:///tmp/crap/img.png" );
+    };
+
+    reload();
+
+    setInterval(reload, 60000);
+});
+</script>
